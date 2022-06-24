@@ -20,9 +20,8 @@ public class Radio {
 
     private int currentStation;
 
-     final int radioMaxVolume = 10;
-
-     final int radioMinVolume = 0;
+    final int radioMaxVolume = 10;
+    final int radioMinVolume = 0;
 
     public int getCurrentVolume() {
         return currentVolume;
