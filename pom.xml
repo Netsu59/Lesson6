@@ -63,7 +63,7 @@
                                             <minimum>100%</minimum>
                                         </limit>
                                         <limit>
-                                            <counter>CLASS</counter>
+                                            <counter>BRANCH</counter>
                                             <value>MISSEDCOUNT</value>
                                             <maximum>0</maximum>
                                         </limit>
