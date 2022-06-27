@@ -153,13 +153,7 @@ public class RadioTest {
         assertEquals(4,radio.getCurrentVolume());
     }
 
-    @Test
-    void reduceVolumeUnderZero(){
-        Radio radio = new Radio();
-        radio.setCurrentVolume(0);
-        radio.reduceVolume();
-        assertEquals(0,radio.getCurrentVolume());
-    }
+
 
 }
 
