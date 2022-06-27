@@ -106,13 +106,6 @@ public class RadioTest {
     }
 
     @Test
-    void setWrongBigStation(){
-        Radio radio = new Radio();
-        radio.setStation(999999999);
-        assertEquals(0,radio.getCurrentStation());
-    }
-
-    @Test
     void increaseVolumeToOne(){
         Radio radio = new Radio();
         radio.setCurrentVolume(0);
