@@ -37,15 +37,6 @@ public class RadioTest {
     }
 
     @Test
-    void setNextStationTwice(){
-        Radio radio = new Radio();
-        radio.setStation(0);
-        radio.setNextStation();
-        radio.setNextStation();
-        assertEquals(2,radio.getCurrentStation());
-    }
-
-    @Test
     void setPreviousStationBeforeOne(){
         Radio radio = new Radio();
         radio.setStation(1);
@@ -111,6 +102,13 @@ public class RadioTest {
         Radio radio = new Radio();
         radio.setStation(0);
         radio.setStation(-1);
+        assertEquals(0,radio.getCurrentStation());
+    }
+
+    @Test
+    void setWrongBigStation(){
+        Radio radio = new Radio();
+        radio.setStation(999999999);
         assertEquals(0,radio.getCurrentStation());
     }
 
