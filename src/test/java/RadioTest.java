@@ -5,6 +5,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class RadioTest {
 
     @Test
+    void setNextStationAfterZero() {
+        Radio radio = new Radio();
+        radio.setStation(0);
+        radio.setNextStation();
+        assertEquals(1,radio.getCurrentStation());
+    }
+
+    @Test
     void setNextStationAfterNine() {
         Radio radio = new Radio();
         radio.setStation(9);
@@ -53,6 +61,14 @@ public class RadioTest {
     }
 
     @Test
+    void setPreviousStationBeforeNine(){
+        Radio radio = new Radio();
+        radio.setStation(9);
+        radio.setPrevStation();
+        assertEquals(8,radio.getCurrentStation());
+    }
+
+    @Test
     void setHighBorderStation(){
         Radio radio = new Radio();
         radio.setStation(9);
@@ -95,14 +111,6 @@ public class RadioTest {
         radio.setCurrentVolume(0);
         radio.increaseVolume();
         assertEquals(1,radio.getCurrentVolume());
-    }
-
-    @Test
-    void increaseVolumeToTwo(){
-        Radio radio = new Radio();
-        radio.setCurrentVolume(1);
-        radio.increaseVolume();
-        assertEquals(2,radio.getCurrentVolume());
     }
 
     @Test
