@@ -98,6 +98,14 @@ public class RadioTest {
     }
 
     @Test
+    void increaseVolumeToTwo(){
+        Radio radio = new Radio();
+        radio.setCurrentVolume(1);
+        radio.increaseVolume();
+        assertEquals(2,radio.getCurrentVolume());
+    }
+
+    @Test
     void increaseVolumeToFive(){
         Radio radio = new Radio();
         radio.setCurrentVolume(4);
@@ -153,7 +161,13 @@ public class RadioTest {
         assertEquals(4,radio.getCurrentVolume());
     }
 
-
+    @Test
+    void reduceVolumeUnderZero(){
+        Radio radio = new Radio();
+        radio.setCurrentVolume(0);
+        radio.reduceVolume();
+        assertEquals(0,radio.getCurrentVolume());
+    }
 
 }
 
