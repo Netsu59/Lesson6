@@ -1,8 +1,7 @@
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Radio {
@@ -20,6 +19,7 @@ public class Radio {
     final int radioMinVolume = 0;
 
     private int currentVolume;
+
 
     public Radio(int number) {
         numberOfStations = number;
